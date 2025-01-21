@@ -1,5 +1,9 @@
 # Parks Directory Plugin
 
+This plugin enables the creation of multiple park posts with facilities categorized as park post categories. 
+The shortcode will display a listing of parks with details such as park location, timings, image, and description. It also includes 
+a filter option for parks based on facilities and a "Load More" functionality.
+
 ## Installation
 1. Download the ZIP file and extract it.
 2. Upload the "parks-directory" folder to the `/wp-content/plugins/` directory.

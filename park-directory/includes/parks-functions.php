@@ -78,7 +78,7 @@ function parks_list_fetch_parks() {
                 <div class="row">  
                     <div class="col-md-6 col-sm-6">
                     
-                        <h3>' . get_the_title() . '</h3>';
+                        <h3><a target="_blank" href="'.get_post_permalink(get_the_ID()).'">' . get_the_title() . '</a></h3>';
             if($location){
                 $content .= '<p><strong>Location: </strong>' . esc_html($location) . '</p>';
             }

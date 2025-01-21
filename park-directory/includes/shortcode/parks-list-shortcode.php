@@ -10,6 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+// park_list Shortcode
+add_shortcode( 'park_list', 'pd_get_parklist' );
+
 function pd_get_parklist( $atts){
 	ob_start();
     $content2 = '';
@@ -59,7 +62,7 @@ function pd_get_parklist( $atts){
                             <div clas="content-cover">
                             <div class="row">  
                                 <div class="col-md-8 col-sm-6">
-                                <h3>' . get_the_title() . '</h3>';
+                                <h3><a target="_blank" href="'.get_post_permalink(get_the_ID()).'">' . get_the_title() . '</a></h3>';
                         if($location){
                             $content .= '<p><strong>Location: </strong>' . esc_html($location) . '</p>';
                         }
@@ -92,6 +95,3 @@ function pd_get_parklist( $atts){
 	$content2 .= ob_get_clean();
 	return $content2;
 }
-
-// Blog Shortcode
-add_shortcode( 'park_list', 'pd_get_parklist' );
